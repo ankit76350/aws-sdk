@@ -5,7 +5,7 @@ Description: Serverless Spring Boot 3 API
 Globals:
   Function:
     Timeout: 30
-    MemorySize: 512
+    MemorySize: 2048
 
 Resources:
   SpringBootFunction:
