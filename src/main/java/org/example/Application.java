@@ -7,9 +7,13 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 import org.example.config.AwsConfig;
 import org.example.controller.OrderController;
+import org.example.controller.OtpController;
 import org.example.controller.PingController;
 import org.example.controller.SqsController;
+import org.example.controller.SnsTopicController;
 import org.example.service.OrderService;
+import org.example.service.SnsService;
+import org.example.service.SnsTopicService;
 import org.example.service.SqsService;
 import org.example.worker.OrderWorker;
 
@@ -24,7 +28,11 @@ import org.example.worker.OrderWorker;
         SqsController.class,
         OrderService.class,
         OrderController.class,
-        OrderWorker.class
+        OrderWorker.class,
+        SnsService.class,
+        OtpController.class,
+        SnsTopicService.class,
+        SnsTopicController.class
 })
 public class Application {
 
